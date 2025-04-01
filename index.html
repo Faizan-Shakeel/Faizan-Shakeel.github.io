@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name - Pro Audio Production & Marketing</title>
+    <title>Your Name // Modern Audio Portfolio</title>
 
-    <!-- Favicon (Replace with your own .ico or .png) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Font Awesome (for icons) -->
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -29,16 +29,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header & Navigation -->
-    <header id="main-header">
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Header -->
+    <header id="main-header" class="reveal">
       <nav class="navbar">
         <div class="container">
-          <a href="#hero" class="logo">YourBrand</a>
+          <a href="#hero" class="logo">YOUR_INITIALS_OR_LOGO</a>
           <ul class="nav-menu">
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#portfolio" class="nav-link">Work</a></li>
+            <li>
+              <a href="#contact" class="nav-link btn btn-outline">Contact</a>
+            </li>
           </ul>
           <div class="hamburger">
             <span class="bar"></span>
@@ -52,55 +57,65 @@
     <main>
       <!-- Hero Section -->
       <section id="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-background-shapes"></div>
         <div class="container hero-content">
-          <h1 class="animate-fade-in">Sound That Speaks Volumes</h1>
-          <p class="subtitle animate-fade-in delay-1">
-            Professional Audio Production & Strategic Sound Marketing
-          </p>
-          <a href="#portfolio" class="btn btn-primary animate-fade-in delay-2"
-            >Explore My Work</a
-          >
+          <div class="hero-text">
+            <h1 class="reveal reveal-delay-1">
+              Sculpting Sound,<br />Amplifying Impact.
+            </h1>
+            <p class="subtitle reveal reveal-delay-2">
+              Expert audio production and marketing for discerning creators and
+              brands.
+            </p>
+            <a href="#portfolio" class="btn btn-primary reveal reveal-delay-3"
+              >View Projects <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
         </div>
-        <a href="#about" class="scroll-down-link" aria-label="Scroll down">
-          <i class="fas fa-chevron-down"></i>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+          <div class="mouse-icon">
+            <div class="wheel"></div>
+          </div>
         </a>
       </section>
 
       <!-- About Section -->
       <section id="about" class="section-padding">
         <div class="container">
-          <h2 class="section-title animate-on-scroll fade-in">About Me</h2>
-          <div class="about-content">
-            <div class="about-image animate-on-scroll slide-in-left">
+          <div class="about-grid">
+            <div class="about-image-wrapper reveal slide-left">
+              <div class="about-image-bg"></div>
               <img
-                src="images/profile-placeholder.jpg"
-                alt="Your Name - Audio Producer"
+                src="images/profile-modern.jpg"
+                alt="Your Name - Audio Professional"
+                class="about-image"
               />
             </div>
-            <div class="about-text animate-on-scroll slide-in-right">
-              <h3>Hi, I'm [Your Name]</h3>
-              <p>
-                I'm a dedicated audio engineer and sound strategist with a
-                passion for crafting immersive sonic experiences. With [X] years
-                in the industry, I specialize in [mention 2-3 key
-                specializations like 'crystal-clear podcast production',
-                'dynamic music mixing & mastering', 'engaging game audio', or
-                'strategic brand soundscapes'].
+            <div class="about-text reveal slide-right">
+              <h2 class="section-title--left">Who I Am</h2>
+              <p class="about-intro">
+                I'm [Your Name], an audio obsessive dedicated to translating
+                creative vision into sonic reality. My world revolves around
+                waveforms, frequencies, and the art of storytelling through
+                sound.
               </p>
               <p>
-                My approach combines technical expertise with creative intuition
-                to ensure your audio not only sounds exceptional but also
-                achieves its intended impact. Whether you're an artist,
-                podcaster, filmmaker, or brand, I'm here to elevate your sound
-                and help you connect with your audience on a deeper level.
+                With a background in [mention your specific background briefly -
+                music technology, sound engineering, marketing] and [X] years
+                crafting audio for [mention types of clients - musicians,
+                filmmakers, podcasters, agencies], I bring a blend of technical
+                precision and artistic sensibility to every project.
               </p>
-              <div class="skills-list">
-                <span><i class="fas fa-check-circle"></i> Mixing</span>
-                <span><i class="fas fa-check-circle"></i> Mastering</span>
-                <span><i class="fas fa-check-circle"></i> Sound Design</span>
-                <span><i class="fas fa-check-circle"></i> Audio Repair</span>
-                <span><i class="fas fa-check-circle"></i> Post-Production</span>
+              <p>
+                My mission is simple: deliver exceptional audio that not only
+                meets technical standards but also resonates emotionally and
+                achieves your strategic goals.
+              </p>
+              <div class="tech-stack">
+                <span>Mixing</span><span>Mastering</span
+                ><span>Sound Design</span
+                ><span>DAWs (Pro Tools/Logic/Ableton)</span
+                ><span>Audio Repair</span><span>Marketing Strategy</span>
               </div>
             </div>
           </div>
@@ -108,66 +123,40 @@
       </section>
 
       <!-- Services Section -->
-      <section id="services" class="section-padding bg-light">
+      <section id="services" class="section-padding bg-gradient">
         <div class="container">
-          <h2 class="section-title animate-on-scroll fade-in">What I Offer</h2>
+          <h2 class="section-title--center reveal">Core Services</h2>
           <div class="services-grid">
-            <!-- Service Item 1 -->
-            <div class="service-item animate-on-scroll fade-in delay-1">
-              <div class="service-icon"><i class="fas fa-sliders-h"></i></div>
-              <h3>Music Mixing</h3>
+            <div class="service-card reveal fade-in">
+              <div class="service-icon"><i class="fas fa-wave-square"></i></div>
+              <h3>Mixing & Mastering</h3>
               <p>
-                Crafting balanced, dynamic, and emotionally resonant mixes that
-                bring your musical vision to life.
+                Polished, dynamic, and commercially competitive audio ready for
+                distribution.
               </p>
             </div>
-            <!-- Service Item 2 -->
-            <div class="service-item animate-on-scroll fade-in delay-2">
-              <div class="service-icon">
-                <i class="fas fa-headphones-alt"></i>
-              </div>
-              <h3>Mastering</h3>
+            <div class="service-card reveal fade-in reveal-delay-1">
+              <div class="service-icon"><i class="fas fa-magic"></i></div>
+              <h3>Sound Design & Foley</h3>
               <p>
-                Providing the final polish for commercial loudness, tonal
-                balance, and optimal playback everywhere.
+                Custom soundscapes, effects, and foley for film, games, and
+                interactive media.
               </p>
             </div>
-            <!-- Service Item 3 -->
-            <div class="service-item animate-on-scroll fade-in delay-3">
-              <div class="service-icon">
-                <i class="fas fa-microphone-alt"></i>
-              </div>
+            <div class="service-card reveal fade-in reveal-delay-2">
+              <div class="service-icon"><i class="fas fa-podcast"></i></div>
               <h3>Podcast Production</h3>
               <p>
-                Full-service editing, mixing, and mastering for clear,
-                professional, and engaging podcasts.
+                Crystal-clear editing, noise reduction, mixing, and mastering
+                for engaging audio content.
               </p>
             </div>
-            <!-- Service Item 4 -->
-            <div class="service-item animate-on-scroll fade-in delay-1">
-              <div class="service-icon"><i class="fas fa-volume-up"></i></div>
-              <h3>Sound Design</h3>
+            <div class="service-card reveal fade-in reveal-delay-3">
+              <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+              <h3>Audio Branding & Marketing</h3>
               <p>
-                Creating custom sound effects and atmospheres for film, games,
-                apps, and branding projects.
-              </p>
-            </div>
-            <!-- Service Item 5 -->
-            <div class="service-item animate-on-scroll fade-in delay-2">
-              <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-              <h3>Audio Marketing</h3>
-              <p>
-                Strategic consulting on using sound effectively to enhance your
-                brand identity and marketing goals.
-              </p>
-            </div>
-            <!-- Service Item 6 -->
-            <div class="service-item animate-on-scroll fade-in delay-3">
-              <div class="service-icon"><i class="fas fa-tools"></i></div>
-              <h3>Audio Repair</h3>
-              <p>
-                Restoring noisy or damaged recordings, removing unwanted sounds,
-                and improving audio clarity.
+                Developing sonic identities and strategies to enhance brand
+                recognition and impact.
               </p>
             </div>
           </div>
@@ -177,119 +166,141 @@
       <!-- Portfolio Section -->
       <section id="portfolio" class="section-padding">
         <div class="container">
-          <h2 class="section-title animate-on-scroll fade-in">Hear My Work</h2>
-          <p class="portfolio-intro animate-on-scroll fade-in delay-1">
-            Explore a selection of projects showcasing my diverse skills. More
-            available upon request.
-          </p>
+          <h2 class="section-title--center reveal">Selected Work</h2>
           <div class="portfolio-grid">
-            <!-- Portfolio Item 1 -->
-            <div class="portfolio-item animate-on-scroll slide-up">
-              <div class="portfolio-image">
+            <!-- Project 1 -->
+            <div class="portfolio-item reveal slide-up">
+              <a href="#project-modal-1" class="portfolio-link">
+                <!-- Link to modal or project page -->
                 <img
-                  src="images/project1-placeholder.jpg"
-                  alt="Project 1 - Artist Name"
+                  src="images/project-modern-1.jpg"
+                  alt="Project Title 1"
+                  class="portfolio-image"
                 />
-              </div>
-              <div class="portfolio-info">
-                <h3>Artist Name - Song Title</h3>
-                <p class="role">Role: Mixing & Mastering</p>
-                <p>
-                  Brief description: Focused on achieving a powerful low-end and
-                  crisp vocal presence for this rock track.
-                </p>
-                <audio controls src="audio/sample1.mp3">
-                  Your browser does not support the audio element.
+                <div class="portfolio-overlay">
+                  <h3>Artist Name - Album Title</h3>
+                  <p>Mixing & Mastering</p>
+                  <span class="view-project-btn"
+                    >Listen <i class="fas fa-play-circle"></i
+                  ></span>
+                </div>
+              </a>
+              <!-- Inline Audio Player for direct listening -->
+              <div class="portfolio-audio">
+                <audio
+                  controls
+                  controlsList="nodownload noremoteplayback"
+                  src="audio/sample1.mp3"
+                >
+                  Your browser does not support audio.
                 </audio>
               </div>
             </div>
 
-            <!-- Portfolio Item 2 -->
-            <div class="portfolio-item animate-on-scroll slide-up delay-1">
-              <div class="portfolio-image">
+            <!-- Project 2 -->
+            <div class="portfolio-item reveal slide-up reveal-delay-1">
+              <a href="#project-modal-2" class="portfolio-link">
                 <img
-                  src="images/project2-placeholder.jpg"
-                  alt="Project 2 - Podcast Name"
+                  src="images/project-modern-2.jpg"
+                  alt="Project Title 2"
+                  class="portfolio-image"
                 />
-              </div>
-              <div class="portfolio-info">
-                <h3>Podcast Name - Episode Excerpt</h3>
-                <p class="role">Role: Editing & Production</p>
-                <p>
-                  Brief description: Enhanced dialogue clarity, reduced
-                  background noise, and added subtle intro/outro music.
-                </p>
-                <audio controls src="audio/sample2.wav">
-                  Your browser does not support the audio element.
+                <div class="portfolio-overlay">
+                  <h3>Short Film - "Title"</h3>
+                  <p>Sound Design & Mix</p>
+                  <span class="view-project-btn"
+                    >Listen <i class="fas fa-play-circle"></i
+                  ></span>
+                </div>
+              </a>
+              <div class="portfolio-audio">
+                <audio
+                  controls
+                  controlsList="nodownload noremoteplayback"
+                  src="audio/sample2.wav"
+                >
+                  Your browser does not support audio.
                 </audio>
               </div>
             </div>
 
-            <!-- Portfolio Item 3 -->
-            <div class="portfolio-item animate-on-scroll slide-up delay-2">
-              <div class="portfolio-image">
+            <!-- Project 3 -->
+            <div class="portfolio-item reveal slide-up reveal-delay-2">
+              <a href="#project-modal-3" class="portfolio-link">
                 <img
-                  src="images/project3-placeholder.jpg"
-                  alt="Project 3 - Game Sound"
+                  src="images/project-modern-3.jpg"
+                  alt="Project Title 3"
+                  class="portfolio-image"
                 />
-              </div>
-              <div class="portfolio-info">
-                <h3>Indie Game - Sound Effects Reel</h3>
-                <p class="role">Role: Sound Design</p>
-                <p>
-                  Brief description: Created immersive environmental sounds and
-                  impactful UI effects for a fantasy RPG.
-                </p>
-                <audio controls src="audio/sample3.ogg">
-                  Your browser does not support the audio element.
+                <div class="portfolio-overlay">
+                  <h3>Podcast Branding - Client Name</h3>
+                  <p>Production & Audio Logo</p>
+                  <span class="view-project-btn"
+                    >Listen <i class="fas fa-play-circle"></i
+                  ></span>
+                </div>
+              </a>
+              <div class="portfolio-audio">
+                <audio
+                  controls
+                  controlsList="nodownload noremoteplayback"
+                  src="audio/sample3.ogg"
+                >
+                  Your browser does not support audio.
                 </audio>
               </div>
             </div>
 
-            <!-- Add More Portfolio Items Here -->
+            <!-- Add More Projects -->
           </div>
+          {/* Optional: Button for more projects */} {/*
+          <div class="text-center reveal fade-in" style="margin-top: 3rem">
+            <a href="#" class="btn btn-secondary">See Full Portfolio</a>
+          </div>
+          */}
         </div>
       </section>
 
-      <!-- Contact Section -->
+      <!-- Contact Section / CTA -->
       <section id="contact" class="section-padding bg-dark">
         <div class="container text-center">
-          <h2 class="section-title animate-on-scroll fade-in">
-            Let's Create Amazing Sound
+          <h2 class="section-title--center light reveal">
+            Ready to Sound Amazing?
           </h2>
-          <p class="animate-on-scroll fade-in delay-1">
-            Ready to discuss your project or have questions? Reach out!
+          <p class="contact-subtitle reveal reveal-delay-1">
+            Let's collaborate on your next audio project. Get in touch to
+            discuss your needs.
           </p>
           <a
-            href="mailto:your.email@example.com"
-            class="btn btn-primary animate-on-scroll fade-in delay-2"
-            >your.email@example.com</a
+            href="mailto:your.modern.email@example.com"
+            class="btn btn-primary btn-lg reveal reveal-delay-2"
           >
-
-          <div class="social-links animate-on-scroll fade-in delay-3">
+            <i class="fas fa-envelope"></i> Send a Message
+          </a>
+          <div class="social-icons reveal reveal-delay-3">
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
               ><i class="fab fa-linkedin"></i
             ></a>
             <a
-              href="https://soundcloud.com/yourprofile"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="SoundCloud"
               ><i class="fab fa-soundcloud"></i
             ></a>
             <a
-              href="https://twitter.com/yourprofile"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Twitter"
-              ><i class="fab fa-twitter"></i
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
             ></a>
             {/*
-            <!-- Add other relevant links like Instagram, Bandcamp etc. -->
+            <!-- Add others like Bandcamp, Twitter -->
             */}
           </div>
         </div>
@@ -299,14 +310,25 @@
     <!-- Footer -->
     <footer id="main-footer">
       <div class="container">
-        <p>© <span id="year"></span> [Your Name/Brand]. All Rights Reserved.</p>
+        <p>
+          © <span id="year"></span> [Your Name/Brand]. Crafted with
+          <i class="fas fa-heart"></i> & <i class="fas fa-headphones"></i>.
+        </p>
       </div>
     </footer>
 
-    <!-- Back to Top Button (Optional) -->
-    <a href="#hero" class="back-to-top hidden" aria-label="Back to top"
-      ><i class="fas fa-arrow-up"></i
-    ></a>
+    <!-- Optional: Project Modals (Hidden by default) -->
+    <!--
+    <div id="project-modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">×</span>
+            <h2>Project Title 1</h2>
+            <img src="images/project-modern-1.jpg" alt="Project 1">
+            <p>Detailed description of the project...</p>
+            <audio controls src="audio/sample1.mp3"></audio>
+        </div>
+    </div>
+    -->
 
     <!-- JavaScript -->
     <script src="script.js"></script>

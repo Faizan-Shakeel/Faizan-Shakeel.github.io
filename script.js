@@ -3,10 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
   const navLinks = document.querySelectorAll(".nav-link");
+  const body = document.body;
 
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
+    body.classList.toggle("no-scroll"); // Prevent scrolling when menu is open
   });
 
   // Close menu when a link is clicked
@@ -14,46 +16,47 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", () => {
       hamburger.classList.remove("active");
       navMenu.classList.remove("active");
+      body.classList.remove("no-scroll");
     })
   );
 
-  // --- Sticky Header ---
+  // --- Sticky Header on Scroll ---
   const header = document.getElementById("main-header");
-  const heroSection = document.getElementById("hero"); // Get hero section
+  const scrollThreshold = 50; // Pixels to scroll before changing header
 
-  // Use hero section height if available, otherwise fallback
-  const scrollThreshold = heroSection ? heroSection.offsetHeight * 0.5 : 50;
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (window.scrollY > scrollThreshold) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    },
+    { passive: true }
+  ); // Improve scroll performance
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > scrollThreshold) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
-
-  // --- Scroll Animations ---
-  const animatedElements = document.querySelectorAll(".animate-on-scroll");
+  // --- Scroll Reveal Animations ---
+  const revealElements = document.querySelectorAll(".reveal");
 
   const observer = new IntersectionObserver(
-    (entries) => {
+    (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          // Optional: Unobserve after animation to save resources
+          // Optional: Unobserve after reveal to save resources
           // observer.unobserve(entry.target);
-        } else {
-          // Optional: Remove class if you want animation to repeat on scroll up
-          // entry.target.classList.remove('is-visible');
         }
+        // Optional: else { entry.target.classList.remove('is-visible'); } // Re-animate on scroll up
       });
     },
     {
-      threshold: 0.1, // Trigger when 10% of the element is visible
+      threshold: 0.1, // Trigger when 10% is visible
+      // rootMargin: "-50px 0px -50px 0px" // Adjust trigger point slightly
     }
   );
 
-  animatedElements.forEach((el) => {
+  revealElements.forEach((el) => {
     observer.observe(el);
   });
 
@@ -63,27 +66,48 @@ document.addEventListener("DOMContentLoaded", () => {
     yearSpan.textContent = new Date().getFullYear();
   }
 
-  // --- Back to Top Button ---
-  const backToTopButton = document.querySelector(".back-to-top");
-  if (backToTopButton) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        // Show after scrolling 300px
-        backToTopButton.classList.add("visible");
-        backToTopButton.classList.remove("hidden");
-      } else {
-        backToTopButton.classList.remove("visible");
-        backToTopButton.classList.add("hidden"); // Use hidden for accessibility if needed
-      }
+  // --- Custom Cursor --- (Optional - can be removed if not desired)
+  const cursorDot = document.querySelector("[data-cursor-dot]");
+  const cursorOutline = document.querySelector("[data-cursor-outline]");
+
+  // Check if elements exist before adding listeners
+  if (cursorDot && cursorOutline) {
+    window.addEventListener("mousemove", function (e) {
+      const posX = e.clientX;
+      const posY = e.clientY;
+
+      // Make cursor visible when mouse moves
+      cursorDot.style.opacity = "1";
+      cursorOutline.style.opacity = "1";
+
+      cursorDot.style.left = `${posX}px`;
+      cursorDot.style.top = `${posY}px`;
+
+      // Outline follows with a slight delay
+      // Use requestAnimationFrame for smoother animation
+      requestAnimationFrame(() => {
+        cursorOutline.style.left = `${posX}px`;
+        cursorOutline.style.top = `${posY}px`;
+      });
+
+      // Animate outline with delay using CSS transition (alternative to JS delay)
+      // cursorOutline.animate({
+      //     left: `${posX}px`,
+      //     top: `${posY}px`
+      // }, { duration: 300, fill: "forwards" }); // Adjust duration for desired delay effect
     });
 
-    // Smooth scroll back to top on click
-    backToTopButton.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+    // Hide cursor when mouse leaves window
+    document.addEventListener("mouseout", () => {
+      cursorDot.style.opacity = "0";
+      cursorOutline.style.opacity = "0";
     });
   }
+
+  // Add hover effects for specific elements to change cursor style (using CSS :hover is often simpler)
+  // Example:
+  // document.querySelectorAll('a, button, .portfolio-link').forEach(el => {
+  //     el.addEventListener('mouseover', () => cursorOutline.classList.add('hover-effect'));
+  //     el.addEventListener('mouseout', () => cursorOutline.classList.remove('hover-effect'));
+  // });
 }); // End DOMContentLoaded
