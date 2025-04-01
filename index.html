@@ -1,7 +1,231 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name - Audio Production & Marketing</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Optional: Add Font Awesome for icons if you like -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+  </head>
   <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a href="#" class="logo">YourBrand/Name</a>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <!-- Add hamburger menu for mobile later if needed -->
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hero">
+        <div class="container hero-content">
+          <h1>Crafting Sonic Experiences That Resonate</h1>
+          <p class="subtitle">
+            Professional Audio Production & Marketing for Musicians, Podcasters,
+            and Brands
+          </p>
+          <a href="#portfolio" class="btn btn-primary">View My Work</a>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section-padding">
+        <div class="container">
+          <h2>About Me</h2>
+          <div class="about-content">
+            <img
+              src="images/profile-placeholder.png"
+              alt="Your Name"
+              class="profile-pic"
+            />
+            <div>
+              <p>
+                Hi, I'm [Your Name], a passionate audio engineer and marketer
+                specializing in [mention your key areas like mixing, mastering,
+                sound design for games, podcast editing, etc.]. I help artists
+                and creators achieve polished, professional sound that connects
+                with their audience.
+              </p>
+              <p>
+                With [X] years of experience and a deep understanding of both
+                the technical and creative aspects of audio, I'm dedicated to
+                bringing your sonic vision to life. My goal is not just great
+                sound, but sound that serves a purpose and achieves results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="section-padding bg-light">
+        <div class="container">
+          <h2>Services</h2>
+          <div class="services-grid">
+            <div class="service-item">
+              {/*
+              <!-- Optional: Add an icon here -->
+              */}
+              <h3>Mixing</h3>
+              <p>
+                Balancing and blending individual tracks into a cohesive,
+                dynamic, and radio-ready song.
+              </p>
+            </div>
+            <div class="service-item">
+              {/*
+              <!-- Optional: Add an icon here -->
+              */}
+              <h3>Mastering</h3>
+              <p>
+                The final polish – ensuring your audio translates perfectly
+                across all playback systems.
+              </p>
+            </div>
+            <div class="service-item">
+              {/*
+              <!-- Optional: Add an icon here -->
+              */}
+              <h3>Podcast Production</h3>
+              <p>
+                Editing, noise reduction, mixing, and mastering for
+                crystal-clear, engaging podcasts.
+              </p>
+            </div>
+            <div class="service-item">
+              {/*
+              <!-- Optional: Add an icon here -->
+              */}
+              <h3>Sound Design</h3>
+              <p>
+                Creating unique sound effects and atmospheres for games, films,
+                or branding.
+              </p>
+            </div>
+            <div class="service-item">
+              {/*
+              <!-- Optional: Add an icon here -->
+              */}
+              <h3>Audio Marketing Strategy</h3>
+              <p>
+                Consulting on how to leverage audio effectively in your
+                marketing campaigns.
+              </p>
+            </div>
+            <div class="service-item">
+              {/*
+              <!-- Optional: Add an icon here -->
+              */}
+              <h3>[Your Other Service]</h3>
+              <p>Brief description of another service you offer.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="section-padding">
+        <div class="container">
+          <h2>Portfolio Showcase</h2>
+          <p class="portfolio-intro">
+            Here are a few examples of my work. Listen and hear the difference.
+          </p>
+          <div class="portfolio-grid">
+            <!-- Portfolio Item 1 -->
+            <div class="portfolio-item">
+              <img
+                src="images/project1-placeholder.png"
+                alt="Project 1 Thumbnail"
+              />
+              <h3>Project Title 1 (e.g., Artist Name - Song Title)</h3>
+              <p class="role">Role: Mixing & Mastering</p>
+              <p>A brief description of the project, challenges, or results.</p>
+              <audio controls src="audio/sample1.mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div class="portfolio-item">
+              <img
+                src="images/project2-placeholder.png"
+                alt="Project 2 Thumbnail"
+              />
+              <h3>Project Title 2 (e.g., Podcast Episode)</h3>
+              <p class="role">Role: Editing & Production</p>
+              <p>
+                Description of the podcast work, maybe focusing on clarity
+                improvement.
+              </p>
+              <audio controls src="audio/sample2.wav">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div class="portfolio-item">
+              <img
+                src="images/project3-placeholder.png"
+                alt="Project 3 Thumbnail"
+              />
+              <h3>Project Title 3 (e.g., Game Sound Design)</h3>
+              <p class="role">Role: Sound Design</p>
+              <p>Description of the sound effects or atmosphere created.</p>
+              <audio controls src="audio/sample3.ogg">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <!-- Add more portfolio items as needed -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section-padding bg-dark">
+        <div class="container text-center">
+          <h2>Ready to Elevate Your Audio?</h2>
+          <p>
+            Let's discuss your project and how I can help you achieve
+            professional sound.
+          </p>
+          <a href="mailto:your.email@example.com" class="btn btn-primary"
+            >Get In Touch</a
+          >
+          {/*
+          <!-- Optional: Add social media links -->
+          */} {/*
+          <div class="social-links">
+            <a href="#">LinkedIn</a> | <a href="#">SoundCloud</a> |
+            <a href="#">Twitter</a>
+          </div>
+          */}
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2023 [Your Name/Brand]. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Optional: Add script.js file link if you add JavaScript later -->
+    <!-- <script src="script.js"></script> -->
   </body>
 </html>
