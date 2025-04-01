@@ -3,232 +3,170 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name | Audio Production Specialist</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-
+    <title>My Audio Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400i,700"
       rel="stylesheet"
     />
-
-    <!-- Font Awesome (Optional, for subtle icons) -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
-
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header -->
-    <header id="main-header">
+    <!-- Navigation -->
+    <header>
       <nav class="navbar">
         <div class="container">
-          <a href="#hero" class="logo">Your Name</a>
-          <ul class="nav-menu">
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#work" class="nav-link">Work</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
+          <div class="logo">
+            <a href="#home">AudioPro</a>
           </div>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
       </nav>
     </header>
 
-    <main>
-      <!-- Hero Section -->
-      <section id="hero" class="section-padding-hero">
-        <div class="container">
-          <div class="hero-content reveal-fade">
-            <span class="hero-greeting">Hello, I'm [Your Name]</span>
-            <h1 class="hero-headline">
-              Expert Audio Production & Sound Design
-            </h1>
-            <p class="hero-description">
-              I help creators and brands achieve professional, impactful sound
-              through meticulous mixing, mastering, and sound design.
-            </p>
-            <a href="#work" class="btn btn-primary">View My Portfolio</a>
-          </div>
-        </div>
-      </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Bring Your Sound to Life</h1>
+        <p>
+          Professional audio production services tailored to your creative
+          vision.
+        </p>
+        <a href="#portfolio" class="btn">View Portfolio</a>
+      </div>
+    </section>
 
-      <!-- About Section -->
-      <section id="about" class="section-padding">
-        <div class="container about-container">
-          <div class="about-image-wrapper reveal-slide-left">
-            <img
-              src="images/profile-professional.jpg"
-              alt="Portrait of [Your Name]"
-              class="about-image"
-            />
-          </div>
-          <div class="about-text reveal-slide-right">
-            <h2 class="section-title">About Me</h2>
-            <p>
-              With over [X] years of experience in the audio industry, I bring a
-              blend of technical proficiency and creative insight to every
-              project. My background includes work in [mention 1-2 key areas
-              like music production, post-production for film, podcast
-              engineering].
-            </p>
-            <p>
-              I am passionate about the details that elevate audio from good to
-              exceptional. Whether it's balancing a complex music mix, cleaning
-              up dialogue, or creating a unique soundscape, my goal is to
-              deliver pristine audio that perfectly serves the project's vision.
-            </p>
-            <p>
-              Key Skills: Mixing, Mastering, Sound Design, Dialogue Editing,
-              Audio Restoration, [Your Specific DAW e.g., Pro Tools].
-            </p>
-            <a href="#contact" class="link-arrow"
-              >Get In Touch <span class="arrow">→</span></a
-            >
-          </div>
-        </div>
-      </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm [Your Name], an experienced audio producer with over [X]
+          years in the industry. I specialize in mixing, mastering, and creative
+          sound design to bring your projects to life.
+        </p>
+        <img src="https://via.placeholder.com/400x300" alt="Profile Picture" />
+      </div>
+    </section>
 
-      <!-- Work/Portfolio Section -->
-      <section id="work" class="section-padding bg-light">
-        <div class="container">
-          <h2 class="section-title centered reveal-fade">Selected Work</h2>
-          <div class="portfolio-grid">
-            <!-- Project 1 -->
-            <div class="portfolio-item reveal-fade delay-1">
-              <div class="portfolio-image-container">
-                <img
-                  src="images/work-thumb-1.jpg"
-                  alt="Thumbnail for Project 1"
-                  class="portfolio-image"
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x300" alt="Project 1" />
+            <div class="portfolio-info">
+              <h3>Project Title 1</h3>
+              <p>Brief description of the project.</p>
+              <audio controls>
+                <source
+                  src="https://www.w3schools.com/html/horse.mp3"
+                  type="audio/mpeg"
                 />
-              </div>
-              <div class="portfolio-content">
-                <span class="portfolio-category">Music Production</span>
-                <h3 class="portfolio-title">Artist Name - Song/Album Title</h3>
-                <p class="portfolio-description">
-                  Mixed and mastered this track, focusing on achieving a wide
-                  stereo image and punchy dynamics.
-                </p>
-                <audio
-                  controls
-                  controlsList="nodownload noremoteplayback"
-                  src="audio/sample1.mp3"
-                >
-                  Your browser does not support audio.
-                </audio>
-              </div>
+                Your browser does not support the audio element.
+              </audio>
             </div>
-
-            <!-- Project 2 -->
-            <div class="portfolio-item reveal-fade delay-2">
-              <div class="portfolio-image-container">
-                <img
-                  src="images/work-thumb-2.jpg"
-                  alt="Thumbnail for Project 2"
-                  class="portfolio-image"
+          </div>
+          <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x300" alt="Project 2" />
+            <div class="portfolio-info">
+              <h3>Project Title 2</h3>
+              <p>Brief description of the project.</p>
+              <audio controls>
+                <source
+                  src="https://www.w3schools.com/html/horse.mp3"
+                  type="audio/mpeg"
                 />
-              </div>
-              <div class="portfolio-content">
-                <span class="portfolio-category">Podcast Production</span>
-                <h3 class="portfolio-title">
-                  Podcast Show Name - Episode Snippet
-                </h3>
-                <p class="portfolio-description">
-                  Provided editing, noise reduction, and mastering for enhanced
-                  clarity and listening experience.
-                </p>
-                <audio
-                  controls
-                  controlsList="nodownload noremoteplayback"
-                  src="audio/sample2.wav"
-                >
-                  Your browser does not support audio.
-                </audio>
-              </div>
+                Your browser does not support the audio element.
+              </audio>
             </div>
+          </div>
+          <!-- Add more portfolio items as needed -->
+        </div>
+      </div>
+    </section>
 
-            <!-- Project 3 -->
-            <div class="portfolio-item reveal-fade delay-3">
-              <div class="portfolio-image-container">
-                <img
-                  src="images/work-thumb-3.jpg"
-                  alt="Thumbnail for Project 3"
-                  class="portfolio-image"
-                />
-              </div>
-              <div class="portfolio-content">
-                <span class="portfolio-category">Sound Design</span>
-                <h3 class="portfolio-title">
-                  Short Film / Game - Scene Example
-                </h3>
-                <p class="portfolio-description">
-                  Created custom sound effects and atmospheric elements to build
-                  tension in this scene.
-                </p>
-                <audio
-                  controls
-                  controlsList="nodownload noremoteplayback"
-                  src="audio/sample3.ogg"
-                >
-                  Your browser does not support audio.
-                </audio>
-              </div>
-            </div>
-
-            <!-- Add more portfolio items -->
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="services-grid">
+          <div class="service-item">
+            <h3>Mixing & Mastering</h3>
+            <p>
+              Enhance the clarity, balance, and impact of your tracks with
+              professional mixing and mastering services.
+            </p>
+          </div>
+          <div class="service-item">
+            <h3>Sound Design</h3>
+            <p>
+              Create unique audio identities with tailored sound effects and
+              design elements.
+            </p>
+          </div>
+          <div class="service-item">
+            <h3>Recording</h3>
+            <p>
+              State-of-the-art recording solutions to capture the best quality
+              sound for your project.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="section-padding">
-        <div class="container contact-container text-center">
-          <h2 class="section-title centered reveal-fade">
-            Let's Discuss Your Project
-          </h2>
-          <p class="contact-text reveal-fade delay-1">
-            I'm available for freelance projects and collaborations. If you're
-            looking for high-quality audio work, feel free to reach out.
-          </p>
-          <a
-            href="mailto:your.professional.email@example.com"
-            class="btn btn-secondary reveal-fade delay-2"
-            >your.professional.email@example.com</a
-          >
-          <div class="contact-socials reveal-fade delay-3">
-            {/*
-            <!-- Keep icons minimal or remove if not essential -->
-            */}
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              >LinkedIn</a
-            >
-            {/*
-            <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud">SoundCloud</a> -->
-            */}
-          </div>
-        </div>
-      </section>
-    </main>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>
+          Have a project in mind? Get in touch to discuss how we can work
+          together.
+        </p>
+        <!-- Replace the form action URL with your preferred form handler -->
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input
+            type="email"
+            name="_replyto"
+            placeholder="Your Email"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
 
     <!-- Footer -->
-    <footer id="main-footer">
+    <footer>
       <div class="container">
-        <p>© <span id="year"></span> [Your Name]. All rights reserved.</p>
+        <p>&copy; 2025 AudioPro. All Rights Reserved.</p>
       </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    <!-- Smooth Scrolling JavaScript -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
